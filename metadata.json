@@ -1,0 +1,6 @@
+{
+  "name": "Image SEO AI Assistant",
+  "description": "An AI-powered tool to generate SEO-friendly titles, descriptions, and tags for your images. Upload single or multiple images, configure your SEO requirements, and let Gemini AI optimize your content.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
