@@ -45,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({ page, setPage }) => {
                     <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleNavClick('home')}>
                         <IconPhotoSeo className="h-8 w-8 text-cyan-400" />
                         <h1 className="text-xl font-bold text-white tracking-tight">
-                            Zedge Image SEO AI Assistant
+                           Image SEO AI Assistant
                         </h1>
                     </div>
                     {/* Desktop Navigation */}
