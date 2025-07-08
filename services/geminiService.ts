@@ -89,7 +89,8 @@ export const generateSeoForImage = async (
 
   try {
     const response: GenerateContentResponse = await ai.models.generateContent({
-      model: "gemini-2.5-flash-preview-04-17", // Using a model that supports vision and JSON output
+      model: "gemini-2.5-flash", // Using a model that supports vision and JSON output | gemini-2.5-flash-preview-04-17
+	  // gemini-1.5-flash gemini-2.5-flash-preview-05-20
       contents: { parts: [imagePart, textPart] },
       config: {
         responseMimeType: "application/json",
