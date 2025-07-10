@@ -34,53 +34,79 @@ export const AdBanner: React.FC<AdBannerProps> = ({ type }) => {
   ].join(" ");
 
   useEffect(() => {
+    // Add error handling for ad scripts
+    const handleAdError = (event: ErrorEvent) => {
+      // Only catch errors from the ad scripts
+      if (
+        (event.filename &&
+          event.filename.includes("highperformanceformat.com")) ||
+        (event.filename && event.filename.includes("profitableratecpm.com"))
+      ) {
+        event.preventDefault();
+        console.warn("Ad script error intercepted:", event.message);
+
+        // Optionally remove problematic ad container content
+        if (adContainerRef.current) {
+          adContainerRef.current.innerHTML = "Ad content unavailable";
+        }
+      }
+    };
+
+    window.addEventListener("error", handleAdError, true);
+
     // Clean up any previous ad scripts
     if (adContainerRef.current) {
       adContainerRef.current.innerHTML = "";
 
-      if (isBanner) {
-        // Banner Ad (728x90)
-        const script = document.createElement("script");
-        script.type = "text/javascript";
-        script.innerHTML = `
+      try {
+        if (isBanner) {
+          // Banner Ad (728x90)
+          const script = document.createElement("script");
+          script.type = "text/javascript";
+          script.innerHTML = `
           atOptions = {
-            'key' : '9fb33e8ea293c96e0f77edbb79b68b38',
+            'key' : 'e5d15dc19a7042b2a3cd56d1c79629dc',
             'format' : 'iframe',
             'height' : 90,
             'width' : 728,
             'params' : {}
           };
         `;
-        adContainerRef.current.appendChild(script);
+          adContainerRef.current.appendChild(script);
 
-        const invokeScript = document.createElement("script");
-        invokeScript.type = "text/javascript";
-        invokeScript.src =
-          "//www.highperformanceformat.com/9fb33e8ea293c96e0f77edbb79b68b38/invoke.js";
-        adContainerRef.current.appendChild(invokeScript);
-      } else {
-        // Native/Tower Ad
-        const script = document.createElement("script");
-        script.async = true;
-        script.setAttribute("data-cfasync", "false");
-        script.src =
-          "//pl27106144.profitableratecpm.com/7ec6a82f409abb7bc84e148097b613a6/invoke.js";
-        adContainerRef.current.appendChild(script);
+          const invokeScript = document.createElement("script");
+          invokeScript.type = "text/javascript";
+          invokeScript.src =
+            "//www.highperformanceformat.com/e5d15dc19a7042b2a3cd56d1c79629dc/invoke.js";
+          adContainerRef.current.appendChild(invokeScript);
+        } else {
+          // Native/Tower Ad
+          const script = document.createElement("script");
+          script.async = true;
+          script.setAttribute("data-cfasync", "false");
+          script.src =
+            "//pl27130681.profitableratecpm.com/7f591130f646bbf7879e1d9b26c18b85/invoke.js";
+          adContainerRef.current.appendChild(script);
 
-        const container = document.createElement("div");
-        container.id = "container-7ec6a82f409abb7bc84e148097b613a6";
-        adContainerRef.current.appendChild(container);
+          const container = document.createElement("div");
+          container.id = "container-7f591130f646bbf7879e1d9b26c18b85";
+          adContainerRef.current.appendChild(container);
+        }
+      } catch (err) {
+        console.error("Error setting up ad:", err);
+        if (adContainerRef.current) {
+          adContainerRef.current.innerHTML = "Ad failed to load";
+        }
       }
     }
-
     // Cleanup function
     return () => {
+      window.removeEventListener("error", handleAdError, true);
       if (adContainerRef.current) {
         adContainerRef.current.innerHTML = "";
       }
     };
   }, [isBanner]);
-
   return (
     <div
       className={containerClasses}

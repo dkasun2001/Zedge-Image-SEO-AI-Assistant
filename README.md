@@ -1,4 +1,4 @@
-# Zedge Image SEO AI Assistant
+# ImageSeo
 
 A TypeScript and React-based application that uses Google's Gemini AI to assist with image SEO optimization.
 
@@ -122,4 +122,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 Feel free to reach out with any questions, suggestions, or feedback!
 
 ---
-Last updated: 2025-07-07
+Last updated: 2025-07-10

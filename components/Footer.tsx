@@ -1,39 +1,32 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { IconGitHub, IconLinkedIn } from "./Icon";
-import type { Page } from "../types";
 
-interface FooterProps {
-  setPage: (page: Page) => void;
-}
-
-export const Footer: React.FC<FooterProps> = ({ setPage }) => {
+export const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-slate-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-between py-6 text-sm text-slate-400 gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
             <p>
-              &copy; {new Date().getFullYear()} Zedge Image SEO AI Assistant.
+              &copy; {new Date().getFullYear()} ImageSeo - AI Assistant.
             </p>
             <nav className="flex gap-x-4">
-              <button
-                onClick={() => setPage("home")}
-                className="hover:text-white transition-colors"
-              >
+              <Link to="/" className="hover:text-white transition-colors">
                 Home
-              </button>
-              <button
-                onClick={() => setPage("about")}
-                className="hover:text-white transition-colors"
-              >
+              </Link>
+              <Link to="/about" className="hover:text-white transition-colors">
                 About
-              </button>
-              <button
-                onClick={() => setPage("terms")}
+              </Link>
+              <Link
+                to="/contact"
                 className="hover:text-white transition-colors"
               >
+                Contact
+              </Link>
+              <Link to="/terms" className="hover:text-white transition-colors">
                 Terms & Conditions
-              </button>
+              </Link>
             </nav>
           </div>
           <div className="flex items-center space-x-4">

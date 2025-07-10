@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location (update with your actual domain)
-Sitemap: https://image-seo-ai-assistant.netlify.app/sitemap.xml
+Sitemap: https://imageseo.online/sitemap.xml
 
 # Optional: Block specific paths
 # Disallow: /admin/
