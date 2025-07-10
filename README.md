@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 # ImageSeo
+=======
+# Image SEO AI Assistant
+>>>>>>> ffc380396f7a7a3ff5bce59a10f2e6d6cee2ae6d
 
 A TypeScript and React-based application that uses Google's Gemini AI to assist with image SEO optimization.
 
 ## Overview
 
 This project helps optimize image metadata, descriptions, and tags for better search engine visibility. Leveraging the power of Google's Gemini AI API, it generates SEO-friendly content for your images.
+
+**Live Demo:** [https://image-seo-ai-assistant.netlify.app/](https://image-seo-ai-assistant.netlify.app/)
 
 ## Features
 
@@ -20,6 +26,7 @@ This project helps optimize image metadata, descriptions, and tags for better se
 - **Language**: TypeScript
 - **AI Integration**: Google Gemini API
 - **Build Tool**: Vite
+- **Deployment**: Netlify
 - **Dependencies**: 
   - @google/genai
   - react
@@ -122,4 +129,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 Feel free to reach out with any questions, suggestions, or feedback!
 
 ---
+<<<<<<< HEAD
 Last updated: 2025-07-10
+=======
+Last updated: 2025-07-08
+>>>>>>> ffc380396f7a7a3ff5bce59a10f2e6d6cee2ae6d
