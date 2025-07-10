@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+
 # ImageSeo
+
 =======
+
 # Image SEO AI Assistant
->>>>>>> ffc380396f7a7a3ff5bce59a10f2e6d6cee2ae6d
+
+> > > > > > > ffc380396f7a7a3ff5bce59a10f2e6d6cee2ae6d
 
 A TypeScript and React-based application that uses Google's Gemini AI to assist with image SEO optimization.
 
@@ -10,7 +14,7 @@ A TypeScript and React-based application that uses Google's Gemini AI to assist 
 
 This project helps optimize image metadata, descriptions, and tags for better search engine visibility. Leveraging the power of Google's Gemini AI API, it generates SEO-friendly content for your images.
 
-**Live Demo:** [https://image-seo-ai-assistant.netlify.app/](https://image-seo-ai-assistant.netlify.app/)
+**Live Site:** [https://https://imageseo.online/](https://image-seo-ai-assistant.netlify.app/)
 
 ## Features
 
@@ -27,7 +31,7 @@ This project helps optimize image metadata, descriptions, and tags for better se
 - **AI Integration**: Google Gemini API
 - **Build Tool**: Vite
 - **Deployment**: Netlify
-- **Dependencies**: 
+- **Dependencies**:
   - @google/genai
   - react
   - react-dom
@@ -42,22 +46,26 @@ This project helps optimize image metadata, descriptions, and tags for better se
 ### Installation
 
 1. Clone the repository:
+
    ```
    git clone https://github.com/dkasun2001/Zedge-Image-SEO-AI-Assistant.git
    cd Zedge-Image-SEO-AI-Assistant
    ```
 
 2. Install dependencies:
+
    ```
    npm install
    ```
 
 3. Create a `.env.local` file in the root directory and add your Gemini API key:
+
    ```
    GEMINI_API_KEY=your_api_key_here
    ```
 
 4. Start the development server:
+
    ```
    npm run dev
    ```
@@ -129,8 +137,10 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 Feel free to reach out with any questions, suggestions, or feedback!
 
 ---
+
 <<<<<<< HEAD
 Last updated: 2025-07-10
 =======
 Last updated: 2025-07-08
->>>>>>> ffc380396f7a7a3ff5bce59a10f2e6d6cee2ae6d
+
+> > > > > > > ffc380396f7a7a3ff5bce59a10f2e6d6cee2ae6d
