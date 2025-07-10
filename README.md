@@ -6,7 +6,7 @@ A TypeScript and React-based application that uses Google's Gemini AI to assist 
 
 This project helps optimize image metadata, descriptions, and tags for better search engine visibility. Leveraging the power of Google's Gemini AI API, it generates SEO-friendly content for your images.
 
-**Live Site:** [https://imageseo.online/](https://https://imageseo.online/)
+**Live Site:** [https://imageseo.online/](https://imageseo.online/)
 
 ## Features
 
